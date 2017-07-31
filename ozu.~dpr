@@ -1,0 +1,23 @@
+program ozu;
+
+uses
+  Forms,
+  main in 'main.pas' {Main_form},
+  frm_dic in 'frm_dic.pas' {Form_dictionary},
+  about in 'about.pas' {about_frm},
+  frm_data in 'frm_data.pas' {Data: TDataModule},
+  frm_setup in 'frm_setup.pas' {setup_form},
+  from_analog in 'from_analog.pas' {FormAnalog},
+  from_arialand in 'from_arialand.pas' {FormAriaLand},
+  browsilka in 'browsilka.pas' {Form_browse};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.Title := 'Учет земельных участков';
+  Application.CreateForm(TMain_form, Main_form);
+  Application.CreateForm(Tabout_frm, about_frm);
+  Application.CreateForm(TData, Data);
+  Application.Run;
+end.
